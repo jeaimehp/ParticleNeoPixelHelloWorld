@@ -1,0 +1,65 @@
+//By: Je'aime Powell
+//The library added was named "neopixel" from the Particle Library
+// This #include statement was automatically added by the Particle IDE.
+#include <neopixel.h>
+// The first number is the number of neopixels conected, the second number is the data pin.
+Adafruit_NeoPixel test = Adafruit_NeoPixel(3, 2);
+
+
+void setup() {
+
+test.begin();
+test.setBrightness(255);
+test.show();
+}
+
+// Process to change a pixel is:
+// First do a test.setPixelColor (<neopixel#inchain>,test.Color(red#,green#,blue#));
+// Second test.show() to load values
+// Last, delay(<#miliseconds>;
+
+
+void loop() {
+// The first number is the neopixel in the chain you want to adjust, the three numbers in test.Color are RGB from 0-255.
+test.setPixelColor (0, test.Color(0, 25, 0));
+test.setPixelColor (1, test.Color(0, 25, 0));
+test.setPixelColor (2, test.Color(0, 0, 0));
+test.show();
+delay(800);
+test.setPixelColor (0, test.Color(0, 50, 0));
+test.setPixelColor (1, test.Color(0, 50, 0));
+test.setPixelColor (2, test.Color(0, 0, 0));
+test.show();
+delay(300);
+test.setPixelColor (0, test.Color(0, 50, 0));
+test.setPixelColor (1, test.Color(0, 50, 0));
+test.setPixelColor (2, test.Color(0, 0, 0));
+test.show();
+delay(1000);
+test.setPixelColor (0, test.Color(0, 255, 0));
+test.setPixelColor (1, test.Color(0, 255, 0));
+test.setPixelColor (2, test.Color(0, 0, 0));
+test.show();
+delay(4000);
+test.setPixelColor (0, test.Color(0, 255, 0));
+test.setPixelColor (1, test.Color(0, 255, 0));
+test.setPixelColor (2, test.Color(0, 255, 0));
+test.show();
+delay(4000);
+test.setPixelColor (0, test.Color(0, 255, 0));
+test.setPixelColor (1, test.Color(0, 255, 0));
+test.setPixelColor (2, test.Color(0, 255, 0));
+test.show();
+delay(4000);
+test.setPixelColor (0, test.Color(0, 0, 255));
+test.setPixelColor (1, test.Color(0, 0, 255));
+test.setPixelColor (2, test.Color(0, 0, 255));
+test.show();
+delay(3000);
+test.setPixelColor (0, test.Color(195, 255, 10));
+test.setPixelColor (1, test.Color(255, 0, 0));
+test.setPixelColor (2, test.Color(0, 255, 0));
+test.show();
+delay(6000);
+
+}
